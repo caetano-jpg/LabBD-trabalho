@@ -1,0 +1,21 @@
+erDiagram
+  TECNICO ||--|| TIME_FANTASY : possui
+  TECNICO ||--o{ ESCALACAO : monta
+  RODADA ||--o{ ESCALACAO : recebe
+  ESQUEMA ||--o{ ESCALACAO : define
+  ESCALACAO ||--|{ ITEM_ESCALACAO : contem
+  ATLETA ||--o{ ITEM_ESCALACAO : escolhido
+  TECNICO ||--o{ LIGA : administra
+  TECNICO }o--o{ LIGA : participa
+  ATLETA ||--o{ ATLETA_RODADA : atua
+  RODADA ||--o{ ATLETA_RODADA : registra
+  ATLETA ||--o{ CLUBE_RODADA : vinculado
+  CLUBE ||--o{ CLUBE_RODADA : representa
+  RODADA ||--o{ PARTIDA : agrupa
+  CLUBE ||--o{ PARTIDA : mandante
+  CLUBE ||--o{ PARTIDA : visitante
+  ATLETA_RODADA ||--o{ SCOUT_PARTIDA : contabiliza
+  PARTIDA ||--o{ SCOUT_PARTIDA : apura
+  SCOUT_TIPO ||--o{ SCOUT_PARTIDA : classifica
+  ATLETA ||--o{ PRECO_HISTORICO : tem
+  RODADA ||--o{ PRECO_HISTORICO : registra
