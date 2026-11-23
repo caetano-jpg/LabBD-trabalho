@@ -87,4 +87,6 @@ Vídeo de apresentação:
 
 • Link: https://drive.google.com/file/d/1VRVnsnoCi473M39MEn_8aXBEDlmPL7QC/view?usp=drive_link
 
+• Diagrama entidade-relacionamento em notação de Chen: https://github.com/caetano-jpg/LabBD-trabalho/blob/main/docs/modelo_chen.png
+
 • Repositório do projeto: https://github.com/caetano-jpg/LabBD-trabalho
