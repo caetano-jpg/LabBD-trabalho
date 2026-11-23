@@ -3,7 +3,7 @@ SET search_path TO liga_facom, public;
 CREATE FUNCTION pontos_atleta(p_atleta BIGINT,p_rodada SMALLINT) RETURNS NUMERIC
 LANGUAGE sql STABLE AS $$
  SELECT COALESCE(sum(sp.quantidade*st.valor),0)::numeric(8,2)
- FROM scout_partida sp JOIN scout_tipo st USING(scout)
+ FROM scout_partida sp JOIN scout_tipo st ON st.sigla = sp.scout
  JOIN atleta a ON a.atleta_id=sp.atleta_id
  WHERE sp.atleta_id=p_atleta AND sp.rodada_id=p_rodada
    AND (st.posicoes_permitidas IS NULL OR a.posicao=ANY(st.posicoes_permitidas))

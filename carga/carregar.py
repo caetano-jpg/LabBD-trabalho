@@ -150,7 +150,8 @@ def main():
             # Atualiza pontuação armazenada a partir dos scouts e seus valores.
             cur.execute("""UPDATE liga_facom.atleta_rodada ar SET pontuacao=COALESCE((
                 SELECT sum(sp.quantidade*st.valor) FROM liga_facom.scout_partida sp
-                JOIN liga_facom.scout_tipo st USING(scout) JOIN liga_facom.atleta a USING(atleta_id)
+                JOIN liga_facom.scout_tipo st ON st.sigla = sp.scout
+                JOIN liga_facom.atleta a USING(atleta_id)
                 WHERE sp.atleta_id=ar.atleta_id AND sp.rodada_id=ar.rodada_id
                 AND (st.posicoes_permitidas IS NULL OR a.posicao=ANY(st.posicoes_permitidas))),0)
                 WHERE ar.rodada_id=%s""", (rodada,))

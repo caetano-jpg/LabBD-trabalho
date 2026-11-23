@@ -51,7 +51,7 @@ foreach ($arquivoSql in $arquivosSql) {
 
 Se um script apresentar erro, interrompa o processo e corrija o problema antes de seguir para o próximo.
 
-Carga de dados e aplicação
+Carga de dados e aplicação:
 
 Na raiz do projeto, defina a conexão e instale as dependências:
 
@@ -83,6 +83,8 @@ Organização do projeto
 • app/: aplicação de terminal.
 • docs/: documentação do modelo e mapeamento relacional.
 
-Vídeo de apresentação
+Vídeo de apresentação:
 
-• Link: adicionar após a gravação. O vídeo deve estar acessível ao professor (por exemplo, YouTube não listado ou Google Drive com permissão de visualização).
+• Link: https://drive.google.com/file/d/1VRVnsnoCi473M39MEn_8aXBEDlmPL7QC/view?usp=drive_link
+
+• Repositório do projeto: https://github.com/caetano-jpg/LabBD-trabalho
